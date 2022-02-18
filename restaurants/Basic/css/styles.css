@@ -128,10 +128,15 @@ body {
     height: 100%;
     position: fixed;
     top: var(--header-height);
-    left: 0;
+    left: 100%;
     max-height: calc(100vh - var(--header-height));
     background-color: var(--black);
     overflow: auto;
+    transition: left .4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  .nav-menu--visible {
+    left: 0;
   }
 
   .nav-item {
