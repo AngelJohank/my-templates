@@ -1,0 +1,133 @@
+:root {
+  --sexy-red: #ff3c78;
+  --white: #ffffff;
+  --alive-green: #63bd52;
+  --semi-white: #a0a0a0;
+  --black: #04030f;
+  /* Header props */
+  --header-height: 65px;
+  --link-transition-duration: .25s;
+}
+
+body {
+  margin-top: var(--header-height);
+  background-color: #555555;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 7vw;
+  max-height: var(--header-height);
+  background-color: var(--black);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 1200px;
+  height: 100%;
+}
+
+.nav-logo {
+  color: var(--semi-white);
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: calc(var(--header-height) - 20px);
+  transition: color var(--link-transition-duration) ease-in;
+}
+
+.nav-logo:hover {
+  color: var(--sexy-red);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0 10px;
+  list-style: none;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0 10px;
+  color: var(--semi-white);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  text-transform: capitalize;
+  transition: color var(--link-transition-duration) ease-in;
+}
+
+.nav-link::after,
+.nav-link--active::after {
+  content: "";
+  position: absolute;
+  height: 3.5px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  border-radius: 3px;
+  background-color: var(--sexy-red);
+  transition: width var(--link-transition-duration) ease-in;
+}
+
+.nav-link:hover {
+  color: var(--white);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link--active {
+  color: var(--white);
+}
+
+.nav-link--active::after {
+  width: 100%;
+  background-color: var(--alive-green);
+  transition: background-color var(--link-transition-duration) ease-in;
+}
+
+.nav-link--active:hover::after {
+  background-color: var(--sexy-red);
+}
+
+.nav-toggle {
+  color: var(--sexy-red);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-logo {
+    font-size: 1.4rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    background-color: var(--semi-white);
+  }
+
+  .nav-link {
+    font-size: .95rem;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+  }
+}
