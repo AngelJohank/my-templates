@@ -123,14 +123,15 @@ body {
 
   .nav-menu {
     flex-direction: column;
-    justify-content: center;
+    padding-top: 20px;
     width: 100%;
-    height: calc(100vh - var(--header-height));
+    height: 100%;
     position: fixed;
     top: var(--header-height);
     left: 0;
+    max-height: calc(100vh - var(--header-height));
     background-color: var(--black);
-    /* overflow: auto  (testing)*/
+    overflow: auto;
   }
 
   .nav-item {
