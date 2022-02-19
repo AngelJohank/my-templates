@@ -1,3 +1,5 @@
+$sexy-red: #eb4d55;
+
 @mixin navbar-box {
   width: 100%;
   max-width: 1200px;
@@ -35,16 +37,8 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  &-btn {
-    color: white;
-    font-size: 1.8rem;
+  &-toggle-check, &-toggle-btn {
     display: none;
-    border: none;
-    background: none;
-
-    i::before {
-      color: white;
-    }
   }
 
   &-logo {
@@ -85,10 +79,19 @@ header {
   }
 }
 
+// Mobile
 @media (max-width: 768px) {
   .navbar {
-    &-btn {
+    &-toggle-btn {
       display: block;
+      cursor: pointer;
+      font-size: 1.8rem;
+      i::before {
+        color: white;
+      }
+    }
+    &-toggle-check:checked ~ &-list {
+      left: 0;
     }
 
     &-list {
@@ -97,12 +100,9 @@ header {
       position: fixed; top: 64px; left: 100%;
       height: calc(100vh - 64px);
       width: 100%;
+      background-color: $sexy-red;
       overflow-y: auto;
-      transition: left .3s ease-in;
-
-      &__active {
-        left: 0;
-      }
+      transition: left .8s cubic-bezier( 0.895, 0.03, 0, 0.99 );
     }
 
     &-link {

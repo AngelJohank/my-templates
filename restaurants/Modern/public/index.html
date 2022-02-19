@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurante</title>
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/main.css">
-  <script src="https://kit.fontawesome.com/9da0bef213.js" crossorigin="anonymous"></script>
-  <script src="./js/index.js" defer></script>
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <a href="#"><img src="" alt="Logo" class="navbar-logo"></a>
-      <button class="navbar-btn" aria-label="toggle"><i class="fa-solid fa-bars"></i></button>
-      <ul class="navbar-list">
-        <li class="navbar-item"><a class="navbar-link__active" href="#">Home</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="#">Acerca de</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="#">Hola</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="#">Fin</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/9da0bef213.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+        <a href="#"><img src="" alt="Logo" class="navbar-logo" /></a>
 
-  <!-- Body -->
-</body>
+        <!-- <button class="navbar-btn" aria-label="toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button> -->
+
+        <input type="checkbox" id="navbar-toggle" class="navbar-toggle-check"/>
+        <label for="navbar-toggle" class="navbar-toggle-btn"><i class="fa-solid fa-bars"></i></label>
+
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a class="navbar-link__active" href="#">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#">Acerca de</a>
+          </li>
+          <li class="navbar-item"><a class="navbar-link" href="#">Hola</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#">Fin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Body -->
+  </body>
 </html>
