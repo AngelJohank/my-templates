@@ -1,0 +1,117 @@
+@mixin navbar-box {
+  width: 100%;
+  max-width: 1200px;
+  height: 64px;
+  max-height: 100%;
+  padding: 15px;
+}
+
+@mixin link {
+  display: block;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+@mixin link-after {
+  position: absolute; top: 100%; left: 0;
+  content: "";
+  height: 3px;
+  width: 0;
+  background-color: white;
+  transition: width .2s ease-in;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  @include navbar-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-btn {
+    color: white;
+    font-size: 1.8rem;
+    display: none;
+    border: none;
+    background: none;
+
+    i::before {
+      color: white;
+    }
+  }
+
+  &-logo {
+    height: 44px;
+    object-fit: contain;
+  }
+
+  &-list {
+    display: flex;
+    list-style: none;
+  }
+
+  &-item, &-item__active {
+    position: relative;
+    margin: 0 10px;
+    padding: .5rem 1rem;
+  }
+
+  &-link {
+    @include link;
+    &::after {
+      @include link-after;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  &-link__active {
+    @include link;
+
+    &::after {
+      @include link-after;
+      transition: none;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    &-btn {
+      display: block;
+    }
+
+    &-list {
+      flex-direction: column;
+      align-items: center;
+      position: fixed; top: 64px; left: 100%;
+      height: calc(100vh - 64px);
+      width: 100%;
+      overflow-y: auto;
+      transition: left .3s ease-in;
+
+      &__active {
+        left: 0;
+      }
+    }
+
+    &-link {
+      font-size: 1.2rem;
+      padding: 10px;
+      &::after {
+        transition: none;
+      }
+    }
+    
+  }
+}
