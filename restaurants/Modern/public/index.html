@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,10 +8,6 @@
     <link rel="icon" type="image/png" href="./img/logo.png" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <script
-      src="https://kit.fontawesome.com/9da0bef213.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <!-- Header -->
@@ -21,9 +17,9 @@
           <img src="./img/logo.png" alt="Logo" class="navbar-logo" />
         </a>
 
-        <input type="checkbox" id="navbar-toggle" class="navbar-toggle-check" />
+        <input type="checkbox" id="navbar-toggle" class="navbar-toggle" />
         <label for="navbar-toggle" class="navbar-toggle-btn" aria-label="toggle"
-          ><i class="fa-solid fa-bars"></i>
+          ><i data-feather="menu"></i>
         </label>
 
         <ul class="navbar-list">
@@ -31,14 +27,51 @@
             <a class="navbar-link__active" href="#">Home</a>
           </li>
           <li class="navbar-item">
-            <a class="navbar-link" href="#">Acerca de</a>
+            <a class="navbar-link" href="#">Postres</a>
           </li>
-          <li class="navbar-item"><a class="navbar-link" href="#">Hola</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#">Fin</a></li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#">Nosotros</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#">Contacto</a>
+          </li>
         </ul>
       </nav>
     </header>
 
+    <!-- Hero -->
+
+    <section class="hero">
+      <img
+        src="https://images.pexels.com/photos/239581/pexels-photo-239581.jpeg?cs=srgb&dl=pexels-brigitte-tohm-239581.jpg&fm=jpg"
+        alt="Hero"
+        class="hero-img"
+      />
+
+      <div class="hero-content">
+        <h1 class="hero-tittle">Dulces Felices</h1>
+        <p class="hero-description">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+      </div>
+      <nav class="hero-nav">
+        <a href="#" class="hero-link">
+          Descubre más <i data-feather="coffee"></i>
+        </a>
+        <a href="#" class="hero-link__primary">
+          Ver las recetas <i data-feather="arrow-down"></i>
+        </a>
+      </nav>
+    </section>
+
     <!-- Body -->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

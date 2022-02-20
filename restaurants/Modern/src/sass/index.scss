@@ -1,7 +1,10 @@
 @use "./components/navbar";
-
-$sexy-red: #eb4d55;
+@use "./components/hero";
 
 body {
-  background-color: $sexy-red;
+  background-color: grey;
+}
+
+* {
+  color: #fff;
 }
