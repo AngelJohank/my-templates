@@ -1,6 +1,10 @@
 @use "./components/navbar";
 @use "./components/hero";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: grey;
 }
