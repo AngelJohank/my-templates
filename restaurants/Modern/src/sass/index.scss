@@ -1,6 +1,6 @@
 @use "./components/navbar";
 @use "./components/hero";
-@use "./components/section";
+@use "./components/footer";
 
 html {
   scroll-behavior: smooth;
@@ -11,7 +11,7 @@ body {
 }
 
 * {
-  color: #fff;
+  color: #f9f9f9;
 }
 
 // Custom Scrollbar

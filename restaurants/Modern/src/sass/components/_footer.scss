@@ -1,0 +1,20 @@
+$mate-color: #2c2c2c;
+
+.footer {
+  height: 30vh;
+  background-color: $mate-color;
+
+  &-list {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    list-style: none;
+  }
+
+  &-link {
+    svg {
+      height: 1.8rem;
+      width: 1.8rem;
+    }
+  }
+}

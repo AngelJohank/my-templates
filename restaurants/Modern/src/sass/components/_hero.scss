@@ -14,7 +14,7 @@ $lime-green: #12c757;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(.7);
+    filter: brightness(.4);
   }
 
   // Content
@@ -33,7 +33,7 @@ $lime-green: #12c757;
   &-description {
     text-align: center;
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   // Nav
